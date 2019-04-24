@@ -35,6 +35,10 @@ class ExpectedFailureTestCase(unittest.TestCase):
         with self.assertRaises(ValueError):
             main.add('A,B,C')
 
+    def test_add_different_delimiters_fail(self):
+        with self.assertRaises(ValueError):
+            main.add(";1.2&3'1")
+
 
 if __name__ == '__main__':
     unittest.main()
