@@ -4,3 +4,5 @@ def add(numbers_string):
 
     numbers = numbers_string.split(",")
     numbers = list(map(int, numbers))
+
+    return sum(numbers)

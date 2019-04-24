@@ -10,6 +10,12 @@ class TestAddFunction(unittest.TestCase):
     def test_add_receives_strings(self):
         main.add("1,2,3")
 
+    def test_add_correctly(self):
+        self.assertEqual(main.add("1,2,3,1"), 7,
+                         "incorrect number sum")
+        self.assertEqual(main.add("3,4,5"), 12,
+                         "incorrect number sum")
+
 
 class ExpectedFailureTestCase(unittest.TestCase):
 
