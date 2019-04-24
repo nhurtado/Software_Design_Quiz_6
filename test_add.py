@@ -13,11 +13,15 @@ class TestAddFunction(unittest.TestCase):
 
 class ExpectedFailureTestCase(unittest.TestCase):
 
-    def test_fail(self):
-        with self.assertRaises(ValueError):
+    def test_add_other_types_fail(self):
+        with self.assertRaises(TypeError):
             main.add(1)
             main.add({})
             main.add([1, 2, 3])
+
+    def test_add_chars_in_list_fail(self):
+        with self.assertRaises(ValueError):
+            main.add('A,B,C')
 
 
 if __name__ == '__main__':
