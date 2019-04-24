@@ -22,6 +22,12 @@ class TestAddFunction(unittest.TestCase):
         self.assertEqual(main.add("%4%5%3"), 12,
                          "incorrect number sum")
 
+    def test_add_dismisses_negative_numbers(self):
+        self.assertEqual(main.add("1,2,3,-1"), 6,
+                         "incorrect number sum")
+        self.assertEqual(main.add("%4%5%-3"), 9,
+                         "incorrect number sum")
+
 
 class ExpectedFailureTestCase(unittest.TestCase):
 

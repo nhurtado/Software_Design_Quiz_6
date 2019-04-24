@@ -8,5 +8,6 @@ def add(numbers_string):
     except ValueError:
         numbers = numbers_string[1:].split(numbers_string[0])
     numbers = list(map(int, numbers))
+    numbers = [number for number in numbers if number >= 0]
 
     return sum(numbers)
