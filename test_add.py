@@ -4,11 +4,11 @@ import main
 
 class TestAddFunction(unittest.TestCase):
 
-    def test_add_exists(self):
+    def test_add_functions_exists(self):
         self.assertTrue("add" in dir(main), "Add function does not exist")
 
-    def test_add_receives_strings(self):
-        main.add("1,2,3")
+    def test_add_receives_numbers_delimited_by_commas(self):
+        main.add("1,2,3,1")
 
     def test_add_correctly(self):
         self.assertEqual(main.add("1,2,3,1"), 7,
