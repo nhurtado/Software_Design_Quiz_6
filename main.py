@@ -1,2 +1,3 @@
 def add(numbers_string):
-    pass
+    if not isinstance(numbers_string, str):
+        raise ValueError('Must be string')
